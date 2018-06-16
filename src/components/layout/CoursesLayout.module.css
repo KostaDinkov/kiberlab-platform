@@ -1,0 +1,57 @@
+:root {
+    --yellow: #ffbf04;
+    --border: 1px solid black;
+}
+
+.course-list {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:  1fr 100px;
+    grid-template-areas:  'content' 'footer ';
+}
+
+.header {
+    position:fixed;
+    width:100vw;
+    padding: 20px;
+    grid-gap: 20px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'logo nav  search'
+}
+
+.logo {
+
+    grid-area: logo;
+}
+
+.nav {
+
+    grid-area: nav;
+    justify-self: center;
+}
+
+.search {
+
+    grid-area: search;
+    justify-self: end;
+}
+
+.content {
+    grid-area: content;
+    justify-self: end;
+
+}
+
+.footer {
+
+    grid-area: footer;
+}
+
+body {
+    background: url("/assets/layout_bg.svg") no-repeat fixed;
+
+}
+

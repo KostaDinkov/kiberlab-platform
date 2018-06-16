@@ -1,0 +1,27 @@
+:root{
+    --radius:5px;
+    --shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container{
+    border-radius:var(--radius);
+    background-color:#fff;
+    box-shadow:var(--shadow);
+    display:grid;
+    grid-template-columns: 200px auto;
+    grid-template-areas: 'image info';
+    overflow: hidden;
+}
+
+.info{
+    grid-area: info;
+    padding:0 10px 10px 20px;
+}
+
+img{
+    grid-area: image;
+    border-radius:var(--radius) 0 0 var(--radius);
+    width:100%;
+    height:auto;
+    object-fit: cover;
+}
