@@ -4,9 +4,7 @@
 }
 
 .container{
-    border-radius:var(--radius);
-    background-color:#fff;
-    box-shadow:var(--shadow);
+
     display:grid;
     grid-template-columns: 200px auto;
     grid-template-areas: 'image info';
@@ -14,6 +12,7 @@
 }
 
 .info{
+
     grid-area: info;
     padding:0 10px 10px 20px;
 }
