@@ -5,7 +5,7 @@ import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import {createStore} from 'redux'
 import reducers from './data/reducers'
 import sampleData from './data/sampleData'
-import UserHome from './components/pages/UserHome'
+import UserHome from './components/pages/UserHome/UserHome'
 
 
 const store = createStore(reducers,sampleData);

@@ -1,7 +1,6 @@
 import React from "react";
 
-
 export default () =>
-    <div className={styles.search}>
+    <div >
         <input type="text" placeholder={'Filter my courses'}/>
     </div>
