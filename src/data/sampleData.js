@@ -1,11 +1,21 @@
+import { SSL_OP_NO_SESSION_RESUMPTION_ON_RENEGOTIATION } from "constants";
+
 const sectionType = {video: 'video', reading: 'reading', game: 'game', quiz: 'quiz'};
 export default {
     courses: {
         JS101: {
             id:"JS101",
-            imageUrl: './assets/batman.jpg',
+            artWorkUrl:'',
+            videoUrl:'',
+            imageUrl: '/assets/batman.jpg',
             name: "Introduction to Javascript",
-            description: "Some descriptions of the course here",
+            price:40,
+            level:'beginner',
+            duration:'1 month',
+            prerequisiteTags:['English','Math'],
+            instructor:'Darth Vader',
+            prerequisites:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat numquam saepe, rem error itaque laboriosam iste dolor consequatur deleniti iure ut illum accusamus ullam iusto cupiditate fuga eum nemo possimus.",
+            description: "Some descriptions of the course here.Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat numquam saepe, rem error itaque laboriosam iste dolor consequatur deleniti iure ut illum accusamus ullam iusto cupiditate fuga eum nemo possimus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat numquam saepe, rem error itaque laboriosam iste dolor consequatur deleniti iure ut illum accusamus ullam iusto cupiditate fuga eum nemo possimus.",
             lessons: {
                 l1: {
                     name: 'Introduction',
@@ -47,9 +57,15 @@ export default {
         },
         JS102: {
             id:"JS102",
-            imageUrl: './assets/ironman.jpg',
-            name: "Advanced Javascript",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae fugiat natus nobis pariatur quam qui quos, saepe. Aut, magnam, rem.",
+            artWorkUrl:'',
+            videoUrl:'',
+            imageUrl: '/assets/ironman.jpg',
+            name: "Introduction to Javascript",
+            price:40,
+            level:'beginner',
+            duration:'1 month',
+            prerequisites:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat numquam saepe, rem error itaque laboriosam iste dolor consequatur deleniti iure ut illum accusamus ullam iusto cupiditate fuga eum nemo possimus.",
+            description: "Some descriptions of the course here",
             lessons: {
                 l1: {
                     name: 'Introduction',
@@ -90,10 +106,16 @@ export default {
             },
         },
         JS103: {
-            id:"JS103",
-            imageUrl: './assets/joker.jpg',
-            name: "Expert Javascript",
-            description: "Beatae fugiat natus nobis pariatur quam qui quos, saepe. Aut, magnam, rem.",
+            id:"JS101",
+            artWorkUrl:'',
+            videoUrl:'',
+            imageUrl: '/assets/batman.jpg',
+            name: "Introduction to Javascript",
+            price:40,
+            level:'beginner',
+            duration:'1 month',
+            prerequisites:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat numquam saepe, rem error itaque laboriosam iste dolor consequatur deleniti iure ut illum accusamus ullam iusto cupiditate fuga eum nemo possimus.",
+            description: "Some descriptions of the course here",
             lessons: {
                 l1: {
                     name: 'Introduction',
@@ -133,6 +155,57 @@ export default {
                 }
             },
         },
+        JS104: {
+            id:"JS104",
+            artWorkUrl:'',
+            videoUrl:'',
+            imageUrl: '/assets/joker.jpg',
+            name: "Introduction to Javascript",
+            price:40,
+            level:'beginner',
+            duration:'1 month',
+            prerequisites:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat numquam saepe, rem error itaque laboriosam iste dolor consequatur deleniti iure ut illum accusamus ullam iusto cupiditate fuga eum nemo possimus.",
+            description: "Some descriptions of the course here",
+            lessons: {
+                l1: {
+                    name: 'Introduction',
+                    description: '',
+                    sections: {
+                        l1s1: {
+                            name: 'Welcome to Javascript',
+                            type: sectionType.video,
+                            videoEmbedUrl: '<iframe width="560" height="315" src="https://www.youtube.com/embed/mNKz3devFAw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>',
+                            points: 5
+                        },
+                        l1s2: {
+                            name: 'Your first Js program',
+                            type: sectionType.reading,
+                            sourceUrl: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque, autem debitis laboriosam maxime, molestiae nesciunt nisi nulla officia provident quas quis reprehenderit, soluta tempore veniam. Fugit quasi suscipit tenetur!</p>',
+                            points: 10,
+                        }
+                    }
+                },
+                l2: {
+                    name: 'Console',
+                    description: '',
+                    sections: {
+                        l2s1: {
+                            name: 'Log messages',
+                            type: sectionType.video,
+                            videoEmbedUrl: '<iframe width="560" height="315" src="https://www.youtube.com/embed/mNKz3devFAw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>',
+                            points: 5
+                        },
+                        l2s2: {
+                            name: 'Math operations',
+                            type: sectionType.reading,
+                            sourceUrl: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque, autem debitis laboriosam maxime, molestiae nesciunt nisi nulla officia provident quas quis reprehenderit, soluta tempore veniam. Fugit quasi suscipit tenetur!</p>',
+                            points: 10,
+                        }
+                    }
+                }
+            },
+        },
+        
     },
     activeUser: {
         id: 'uId0001',
