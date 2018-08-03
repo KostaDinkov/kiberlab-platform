@@ -1,10 +1,32 @@
 import React, { Fragment } from "react";
 import Card from '../../elements/Card/Card';
-import styles from './StatsPanel.module.css';
 import { connect } from 'react-redux';
+import styled from 'styled-components'
 
-//available layout positions: avatar, achievements, courses, profile
+//#region Styles
 
+const MainContainer = styled.div`
+  display:grid;
+  grid-template-rows: auto 1fr 1fr 1fr;
+  grid-template-areas: 'avatar' 'achievements' 'courses' 'profile';
+`
+
+const AvatarContainer = styled.div`
+  grid-area: avatar;
+`
+
+const AchevementsContainer = styled.div`
+  grid-area: achievements;
+`
+
+const CoursesContainer = styled.div`
+  grid-area: courses;
+`
+
+const ProfileContainer = styled.div`
+  grid-area:profile;
+`
+//#endregion
 class StatsPanel extends React.Component {
     render() {
         const user = this.props.activeUser;
@@ -12,20 +34,20 @@ class StatsPanel extends React.Component {
         return (
             <Fragment>
                 <Card>
-                    <div className={styles.container}>
-                        <div className={styles.avatar}>
+                    <MainContainer >
+                        <AvatarContainer>
                             <h1>Hello {user.firstName}</h1>
-                        </div>
-                        <div className={styles.achievements}>
+                        </AvatarContainer>
+                        <AchevementsContainer>
                             <p>Achievements</p>
-                        </div>
-                        <div className={styles.courses}>
+                        </AchevementsContainer>
+                        <CoursesContainer >
                             <p>Courses</p>
-                        </div>
-                        <div className={styles.profile}>
+                        </CoursesContainer>
+                        <ProfileContainer>
                             <p>Profile</p>
-                        </div>
-                    </div>
+                        </ProfileContainer>
+                    </MainContainer>
                 </Card>
             </Fragment>
         )

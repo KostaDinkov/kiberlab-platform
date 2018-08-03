@@ -47,8 +47,8 @@ const CourseListContainer = styled.div`
   grid-area: right;
 `
 //#endregion
-class UserHome extends Component {
 
+class UserHome extends Component {
   render() {
     const courses = this.props.courses;
     return (

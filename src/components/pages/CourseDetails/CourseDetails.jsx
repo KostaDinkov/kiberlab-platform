@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import Card from '../../elements/Card/Card'
-import { Button, PrimaryButton } from '../../elements/Button/Button';
+import { PrimaryButton } from '../../elements/Button/Button';
 import styled from 'styled-components'
 
 //#region Styling

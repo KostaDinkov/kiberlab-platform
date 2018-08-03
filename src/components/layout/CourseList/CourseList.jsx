@@ -7,8 +7,8 @@ export default function (props) {
     return (
         <div className={styles.container}>
             <h1>My Courses</h1>
-            {courses.map(c => (
-                <CourseListItem key={c.id} course={c} />
+            {courses.map((c,i) => (
+                <CourseListItem key={c.id+i} course={c} />
             ))}
         </div>
     )
